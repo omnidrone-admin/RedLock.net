@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>RedLockNet</RootNamespace>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Version>2.0.0-pre2</Version>

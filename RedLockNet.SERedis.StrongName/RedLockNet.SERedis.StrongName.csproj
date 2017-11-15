@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;netstandard1.5</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <AssemblyName>RedLockNet.SERedis.StrongName</AssemblyName>
     <PackageId>RedLock.net</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
     <RootNamespace>RedLockNet.SERedis</RootNamespace>
     <Version>2.0.0-pre2</Version>
     <Description>An implementation of the Redlock distributed lock algorithm</Description>
@@ -20,7 +19,7 @@
     <PackageTags>RedLock Redis Distributed Lock</PackageTags>
     <PackageReleaseNotes>2.0.0-pre2 - .NET Core release</PackageReleaseNotes>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-	  <SignAssembly>True</SignAssembly>
+	  <SignAssembly>False</SignAssembly>
 	  <AssemblyOriginatorKeyFile>..\RedLock.StrongName.snk</AssemblyOriginatorKeyFile>
 		<DefineConstants>STRONG_NAME</DefineConstants>
 	</PropertyGroup>
@@ -31,17 +30,7 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="1.1.1" />
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="System.Threading.Tasks.Parallel" Version="4.3.0" />
   </ItemGroup>
 
